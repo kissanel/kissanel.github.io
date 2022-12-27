@@ -123,7 +123,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </div>
 	    <a href="#whoarewe" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHO ARE WE</a>
 	  <a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
-	    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+	    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
 
   </div>
 </div>
@@ -134,7 +134,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <a href="https://kissanel.github.io/services.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">SERVICES</a>
 	<a href="#whoarewe" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">WHO ARE WE</a>
 	<a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">BLOG</a>
-	<a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+	<a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT US</a>
 
 </div>
 	
@@ -144,7 +144,20 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <div class="chat-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
+	  <h1>Drop us a message!</h>
+		<form action="https://formsubmit.co/services@nottheeasyway.co.uk" method="POST">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
 
     <label for="msg"><b>Message</b></label>
     <textarea placeholder="Type message.." name="msg" required></textarea>
@@ -153,6 +166,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
+	
+	   
+ 
 
 <script>
 function openForm() {
@@ -257,7 +273,7 @@ arranging.</p></br>
   <!-- The Contact Section -->
   <div class="w3-white" id="contact">
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <h2 class="w3-wide w3-center">CONTACT US</h2>
     <p class="w3-opacity w3-center"><i>Connect with the Not The Easy Way Community!</i></p>
 	  <a href="https://kissanel.github.io/Speak Charter (1).pdf" download rel="noopener noreferrer" target="_blank">
 		<button class= "w3-purple" style="width:50% w3-center"><i class="fa fa-download"></i> Download our Speak Charter as a basis for courageous conversations! </button></a><br></br>
