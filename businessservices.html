@@ -1,1 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Not The Easy Way Resources </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+.btn {
+  background-color: Purple;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: Purple;
+}
+
+
+.btngreen {
+  background-color: Green;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: Green;
+}
+
+
+.btngrey {
+  background-color: Grey;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: Grey;
+}
+	
+/*Chat box */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: LightGray;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: tomato;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+		
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-teal w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  <a href="https://kissanel.github.io/index.html#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	  <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">SERVICES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+		<p><a href="https://kissanel.github.io/familyservices.html"  class="w3-bar-item w3-button">Inspire Courage in Young People</a></p>
+		<p><a href="https://kissanel.github.io/businessservices.html" class="w3-bar-item w3-button">Inspire Courage in Business</a></p>
+
+      </div>
+    </div>
+	    <a href="https://kissanel.github.io/index.html#whoarewe" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHO ARE WE</a>
+	  <a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
+	    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-teal w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="https://kissanel.github.io/familyservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN YOUNG PEOPLE</a>
+	<a href="https://kissanel.github.io/familyservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN BUSINESS</a>
+	<a href="https://kissanel.github.io/index.html#whoarewe" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">WHO ARE WE</a>
+	<a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">BLOG</a>
+	<a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+
+</div>
+	
+	<!-- Chat Button--> 
+<button class="open-button fa fa-comment" onclick="openForm()"> Drop us a message!</button>
+<div class="chat-popup" id="myForm">
+  <!--<form action="/action_page.php" class="form-container"> -->
+		<form action="https://formsubmit.co/services@nottheeasyway.co.uk" method="POST" class="form-container">
+		<h4>Drop us a message!</h4>
+         	<div class="w3-row-padding" style="margin:0 -16px 8px -16px"> 
+         	 <div class="w3-half"> 
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section" type="submit">SEND</button>
+	<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+      </div>
+  </form>
+</div>
+	
+	
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+  
+  <!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-display-container w3-center">
+    <img src="https://kissanel.github.io/178827426_963588767720344_8110646165882056622_n.png" style="width:100%">
+    </div>
+  </div>
+
+  
+  <!-- SERVICES -->
+  <div class="w3-sand" id="families">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center"> Services to inspire courage in your business or organisation </h2>
+		<br></br>
+Bold, courageous businesses & organisations are ones in which there is a diversity of viewpoint.<br></br>
+Diverse views provoke critical thinking, innovation, and creative solutions that result in motivated and formidable workforces.	<br></br>
+   <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"I never learned from a man who agreed with me</i></p>
+	    <p>- Robert A Heinlein</p>
+</div>
+
+To foster boldness, we need workforces and teams that are psychologically flexible, can communicate clearly,
+
+disagree productively, and tolerate challenges.  	<br></br>
+We are chartered psychologists who will provide consultation, training, and coaching to help your
+organisation to become an environment that stimulates an engaged, communicative, and resilient workforce.
+	<br></br>
+
+<img src= "https://kissanel.github.io/184387686_860638864794590_2431505901668508539_n.png" style="width:100%">
+</div>
+	 </div>
+
+
+<div class = "w3-pale-blue">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    <h2 class="w3-wide w3-center"> "The absence of conflict is not harmony, it’s apathy*”- Eisenhardt et al., 1997 </h2> 
+	  </div>
+	 </div>
+
+	
+ <div class="w3-sand">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <p class="w3-center"> We provide training, supervision & implementation support for all our
+			programmes listed below. <br> We also provide bespoke packages of psychologist involvement which can be negotiated with us directly to
+meet the needs of your school and the young people and the families you support (e.g., a combination of
+	    programmes and/or psychological consultation across the year to support specific concerns).	</br>
+<br></br>
+
+
+<!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-container w3-third w3-margin-bottom">
+      <img src="https://kissanel.github.io/Cultures.png" alt="Cultures" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Cultures of Disagreement</b></p>
+        <p>
+          <b>Strategic Offer</b>
+An in-depth analysis of
+the communication
+styles in your
+organisation and a
+strategic plan to
+optimise communication
+& productive
+disagreement. This will
+establish a culture of
+innovation, motivation,
+productivity & wellbeing.
+          
+          <br></br>
+
+ <b>Skills Based Offer </b>
+Two-day skills training
+for employees on
+productive disagreement
+& how these skills can
+be applied to enhance
+creativity and
+productivity within
+specific work-place
+contexts.</p>
+      </div>
+    </div>
+    <div class="w3-container w3-third w3-margin-bottom">
+      <img src="https://kissanel.github.io/Individual Coaching for business.jpg" alt="Coaching" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Coaching for Business</b></p>
+        <p>We offer coaching to
+individuals in your
+business or organisation.
+As psychologists, we use
+powerful, thought-
+provoking & curious
+questioning to empower
+you to better understand
+your situation, what
+strengthens & hinders
+you and help you to take
+values-aligned action to
+meet your professional
+goals.
+ 
+
+<div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://kissanel.github.io/Group Resiliency Coaching Business.jpg" alt="Resiliency" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Resiliency Group Coaching for Business</b></p>
+        <p>We offer group
+coaching session
+s to support
+teams and
+individuals to
+reflect on
+their responses to
+challenge and to
+develop
+psychological
+flexibility to
+improve their
+ability to cope
+with stress.</p>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+ <div class="w3-white" id="contact">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Connect with the Not The Easy Way Community!</i></p>
+	  <a href="https://kissanel.github.io/Speak Charter (1).pdf" download rel="noopener noreferrer" target="_blank">
+		<button class= "w3-purple" style="width:50% w3-center w3-opacity"><i class="fa fa-download"></i> Download our Speak Charter as a basis for courageous conversations! </button></a><br></br>
+    <div class="w3-row w3-padding-32">
+	    <div class="w3-xlarge w3-section">
+ <a href="https://www.instagram.com/nottheeasyway/" target="_blank"><i class="fa fa-instagram w3-hover-opacity w3-xxlarge"></a></i>
+    <a href="https://twitter.com/NotTheEasyWay1?s=20" target="_blank"><i class="fa fa-twitter w3-hover-opacity w3-xxlarge"></a></i>
+    <a href="https://www.instagram.com/nottheeasyway/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-xxlarge"></a></i>
+	<a href="https://www.youtube.com/channel/UCH1cLLPGrDME2m4EYrQ05DA/featured" target="_blank"><i class="fa fa-youtube w3-hover-opacity w3-xxlarge"></a></i>
+	  </div>
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Birmingham, UK <br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: services@nottheeasyway.co.uk<br>
+      </div>
+      <div class="w3-col m6">
+      <!--  <form action="/action_page.php" target="_blank"> -->
+		<form action="https://formsubmit.co/services@nottheeasyway.co.uk" method="POST">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+    </div>
+
+ 
+
+ 
+   
+   <!--<button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Something
+    </button>-->
+
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+	  <img src= "https://kissanel.github.io/177996293_196279332140450_5399064629238412864_n.jpg" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-grey w3-xlarge">
+
+  <a href="#" class="w3-button w3-light-grey w3-large"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+ <a href="https://www.instagram.com/nottheeasyway/" target="_blank"><i class="fa fa-instagram w3-hover-opacity w3-xxlarge"></a></i>
+    <a href="https://twitter.com/NotTheEasyWay1?s=20" target="_blank"><i class="fa fa-twitter w3-hover-opacity w3-xxlarge"></a></i>
+    <a href="https://www.instagram.com/nottheeasyway/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity w3-xxlarge"></a></i>
+	<a href="https://www.youtube.com/channel/UCH1cLLPGrDME2m4EYrQ05DA/featured" target="_blank"><i class="fa fa-youtube w3-hover-opacity w3-xxlarge"></a></i>
+	  </div>
+	<p class="w3-medium">Powered by Louise Kissane </p>
+</footer>
+
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal2');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
