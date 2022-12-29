@@ -1,91 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Not The Easy Way Blog </title>
+<title>Not The Easy Way </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 
-.btn {
-  background-color: Purple;
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
-.btn:hover {
-  background-color: Purple;
-}
 
 
 .btngreen {
-  background-color: Green;
+  background-color: sand;
   border: none;
-  color: white;
+  color: black;
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
 }
 .btn:hover {
-  background-color: Green;
+  background-color: sand;
 }
 
+	
+/*Chat box */
 
-.btngrey {
-  background-color: Grey;
-  border: none;
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
   color: white;
-  padding: 12px 30px;
+  padding: 16px 20px;
+  border: none;
   cursor: pointer;
-  font-size: 20px;
-}
-.btn:hover {
-  background-color: Grey;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
 }
 
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
 
-		
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: LightGray;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: tomato;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+	
 </style>
-<body>
+<body>	
+	
+	
+	
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
+  <div class="w3-bar w3-teal w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="https://kissanel.github.io/index.html#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="https://kissanel.github.io/index.html#missioninaction" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MISSION IN ACTION </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
 	<div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">RESOURCES <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#speak" class="w3-bar-item w3-button w3-black">SPEAK</a>
-        <a href="#aspire" class="w3-bar-item w3-button w3-black">ASPIRE</a>
-        <a href="#takeaction" class="w3-bar-item w3-button w3-black">TAKE ACTION</a>
+      <button class="w3-padding-large w3-button" title="More">SERVICES <i class="fa fa-caret-down"></i></button>     
+         <div class="w3-dropdown-content w3-bar-block w3-card-4">
+		<p><a href="https://kissanel.github.io/familyservices.html"  class="w3-bar-item w3-button">Inspire Courage in Young People</a></p>
+		<p><a href="https://kissanel.github.io/businessservices.html" class="w3-bar-item w3-button">Inspire Courage in Business </a></p>
       </div>
     </div>
-    <a href="https://kissanel.github.io/index.html#getinvolved" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GET INVOLVED</a>
-	<a href="https://kissanel.github.io/index.html#whoarewe" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
-  	<a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
-	  <a href="https://kissanel.github.io/index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-		
+	    <a href="#whoarewe" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHO ARE WE</a>
+	  <a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
+	    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+
   </div>
 </div>
 
+
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="https://kissanel.github.io/index.html#missioninaction" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MISSION IN ACTION</a>
-  <a href="#speak" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESOURCES</a>
-  <a href="https://kissanel.github.io/index.html#getinvolved" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GET INVOLVED</a>
-  <a href="https://kissanel.github.io/index.html#whoarewe" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+<div id="navDemo" class="w3-bar-block w3-teal w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+     <a href="https://kissanel.github.io/familyservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN YOUNG PEOPLE</a>
+	<a href="https://kissanel.github.io/businessservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN BUSINESS</a>
+	<a href="#whoarewe" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">WHO ARE WE</a>
 	<a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">BLOG</a>
-  <a href="https://kissanel.github.io/index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-	
+	<a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT US</a>
+
 </div>
+	
+
+<!-- Chat Button--> 
+
+<button class="open-button fa fa-comment" onclick="openForm()"> Drop us a message!</button>
+<div class="chat-popup" id="myForm">
+  <!--<form action="/action_page.php" class="form-container"> -->
+		<form action="https://formsubmit.co/services@nottheeasyway.co.uk" method="POST" class="form-container">
+		<h4>Drop us a message!</h4>
+         	<div class="w3-row-padding" style="margin:0 -16px 8px -16px"> 
+         	 <div class="w3-half"> 
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section" type="submit">SEND</button>
+	<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+      </div>
+  </form>
+</div>
+	
+	
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
@@ -94,26 +181,7 @@ body {font-family: "Lato", sans-serif}
     <img src="https://kissanel.github.io/178827426_963588767720344_8110646165882056622_n.png" style="width:100%">
     </div>
   </div>
-  <div class="mySlides w3-display-container w3-center">
-   	<!-- <img src=" https://scontent-dub4-1.xx.fbcdn.net/v/t1.15752-9/184387686_860638864794590_2431505901668508539_n.png?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=NOSKNqvkFTUAX94p3di&_nc_ht=scontent-dub4-1.xx&oh=9b628c716ea786924313f8b8134b2206&oe=60C53F36" style="width:100%" style = "height: 50%">-->
-       <img src="https://kissanel.github.io/192272108_333610641493850_5726009227940435034_n.png" style="width:100%">
-
-	<!--  <img src="  https://scontent-dub4-1.xx.fbcdn.net/v/t1.15752-9/192272108_333610641493850_5726009227940435034_n.png?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_ohc=Qu7Dnc13x48AX_vv--_&_nc_ht=scontent-dub4-1.xx&oh=961da9ce0253141f60de93b7bfde3a7a&oe=60D5EFAC" style="width:100%" style = "height: 50%">-->
-	<!--<div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>  
-    </div> -->
-  </div>
-
-  <div class="mySlides w3-display-container w3-center">
-<!--  <img src = "https://scontent-dub4-1.xx.fbcdn.net/v/t1.15752-9/192348012_585573635871274_3115650663976763199_n.png?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_ohc=mFwEkn304o4AX-DZkBD&_nc_ht=scontent-dub4-1.xx&oh=0773eddd3033eb5d4de86e2035e9ac99&oe=60D5369A" style="width:100%">-->
-    <img src="https://kissanel.github.io/186913316_1109615652782252_8482835499517693584_n.jpg" style="width:100%">
-
-	  <!--   <img src="https://scontent-dub4-1.xx.fbcdn.net/v/t1.15752-9/183854805_948951169229331_5278924981071820315_n.png?_nc_cat=104&ccb=1-3&_nc_sid=ae9488&_nc_ohc=FnTYtsvKauMAX8fC_-g&_nc_ht=scontent-dub4-1.xx&oh=9a7f8dd41a2c9ecb5231af1d3fe9acaa&oe=60C5393B" style="width:100%">-->
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-  </div>
-  </div>
-
+	
 <!-- BLOG ENTRY 2 -->
 	<div class="w3-container" id="blog1">
   <div class="w3-content" style="max-width:700px">
