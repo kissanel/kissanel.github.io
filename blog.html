@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Not The Easy Way </title>
+<title>Not The Easy Way Resources </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 
-
-
-.btngreen {
-  background-color: sand;
+.btn {
+  background-color: Purple;
   border: none;
-  color: black;
+  color: white;
   padding: 12px 30px;
   cursor: pointer;
   font-size: 20px;
 }
 .btn:hover {
-  background-color: sand;
+  background-color: Purple;
 }
 
+
+.btngreen {
+  background-color: Green;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: Green;
+}
+
+
+.btngrey {
+  background-color: Grey;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: Grey;
+}
 	
 /*Chat box */
 
@@ -89,57 +113,51 @@ body {font-family: Arial, Helvetica, sans-serif;}
   margin-bottom:10px;
   opacity: 0.8;
 }
-
+	
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: tomato;
 }
 
-/* Add some hover effects to buttons */
+/*Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
-}
-
-	
+	}
+		
 </style>
-<body>	
-	
-	
-	
+<body>
 
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-teal w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-	<div class="w3-dropdown-hover w3-hide-small">
+  <a href="https://kissanel.github.io/index.html#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	  <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">SERVICES <i class="fa fa-caret-down"></i></button>     
-         <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
 		<p><a href="https://kissanel.github.io/familyservices.html"  class="w3-bar-item w3-button">Inspire Courage in Young People</a></p>
-		<p><a href="https://kissanel.github.io/businessservices.html" class="w3-bar-item w3-button">Inspire Courage in Business </a></p>
+		<p><a href="https://kissanel.github.io/businessservices.html" class="w3-bar-item w3-button">Inspire Courage in Business</a></p>
+
       </div>
     </div>
-	    <a href="#whoarewe" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHO ARE WE</a>
+	    <a href="https://kissanel.github.io/index.html#whoarewe" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WHO ARE WE</a>
 	  <a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
-	    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+	    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
 
   </div>
 </div>
 
-
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-teal w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-     <a href="https://kissanel.github.io/familyservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN YOUNG PEOPLE</a>
-	<a href="https://kissanel.github.io/businessservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN BUSINESS</a>
-	<a href="#whoarewe" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">WHO ARE WE</a>
+  <a href="https://kissanel.github.io/familyservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN YOUNG PEOPLE</a>
+	<a href="https://kissanel.github.io/familyservices.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()"> SERVICES: INSPIRE COURAGE IN BUSINESS</a>
+	<a href="https://kissanel.github.io/index.html#whoarewe" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">WHO ARE WE</a>
 	<a href="https://kissanel.github.io/blog.html" class="w3-bar-item w3-button w3-padding-large"onclick="myFunction()">BLOG</a>
-	<a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT US</a>
+	<a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 
 </div>
 	
-
-<!-- Chat Button--> 
-
+	<!-- Chat Button--> 
 <button class="open-button fa fa-comment" onclick="openForm()"> Drop us a message!</button>
 <div class="chat-popup" id="myForm">
   <!--<form action="/action_page.php" class="form-container"> -->
@@ -155,7 +173,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
           <button class="w3-button w3-black w3-section" type="submit">SEND</button>
-	<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+	<button type="button" class="btn cancel w3-left" onclick="closeForm()">Close</button>
 
       </div>
   </form>
@@ -172,15 +190,16 @@ function closeForm() {
 }
 </script>
 
-
-
-<!-- Page content -->
+  
+  <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
   <!-- Automatic Slideshow Images -->
     <div class="mySlides w3-display-container w3-center">
     <img src="https://kissanel.github.io/178827426_963588767720344_8110646165882056622_n.png" style="width:100%">
     </div>
   </div>
+
+  
 	
 <!-- BLOG ENTRY 2 -->
 	<div class="w3-container" id="blog1">
